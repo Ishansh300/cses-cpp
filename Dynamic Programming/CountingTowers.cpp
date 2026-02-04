@@ -9,13 +9,11 @@ using namespace std;
 #define uset unordered_set
 const int mod=1000000007;
 const int N = 1e6 + 2;
-typedef tree<int, null_type, less<int>, rb_tree_tag,
-			 tree_order_statistics_node_update>// find_by_order(); order_of_key();
-	ord_set;
-	template <typename T> 
-		  using minheap=priority_queue<T,vector<T>,greater<T>>;
-	template <typename T> 
-		  using maxheap=priority_queue<T>;
+typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ord_set;// find_by_order(); order_of_key();
+template <typename T> 
+        using minheap=priority_queue<T,vector<T>,greater<T>>;
+template <typename T> 
+        using maxheap=priority_queue<T>;
 ll add(ll a, ll b) { a = a % mod; b = b % mod; return (a + b) % mod;}
 ll mul(ll a, ll b) { a = a % mod; b = b % mod; return (a * b) % mod; }
 ll sub(ll a, ll b) { a = a % mod; b = b % mod; return ((a - b) + mod) % mod; }
